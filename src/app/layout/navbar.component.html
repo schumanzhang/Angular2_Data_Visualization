@@ -4,4 +4,21 @@
     <button md-icon-button [mdMenuTriggerFor]="menu">
         <i class="material-icons">more_vert</i>
     </button>
+    <md-menu #menu="mdMenu">
+        <button md-menu-item> 
+            <md-icon>account_circle</md-icon>
+            <span>Profile</span>
+        </button>
+        <button md-menu-item> 
+            <md-icon>build</md-icon>
+            <span>Settings</span>
+        </button>
+    </md-menu>
 </md-toolbar>
+
+<md-tab-group>
+    <md-tab label="List View">
+    </md-tab>
+    <md-tab label="Graph View">
+    </md-tab>
+</md-tab-group>
