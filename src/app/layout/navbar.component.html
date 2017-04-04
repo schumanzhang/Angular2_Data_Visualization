@@ -16,9 +16,11 @@
     </md-menu>
 </md-toolbar>
 
-<md-tab-group>
-    <md-tab label="List View">
-    </md-tab>
-    <md-tab label="Graph View">
-    </md-tab>
-</md-tab-group>
+<nav md-tab-nav-bar>
+    <a md-tab-link routerLink="/" [active]="listActive" (click)="checkActiveLink('list')">
+        List View
+    </a>
+    <a md-tab-link routerLink="/graph" [active]="graphActive" (click)="checkActiveLink('graph')">
+        Graph View
+    </a>
+</nav>
