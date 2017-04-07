@@ -9,6 +9,7 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
 import { GraphComponent } from './components/graph/graph.component';
+import { CardComponent } from './components/card/card.component';
 import { NavbarComponent } from './layout/navbar.component';
 
 import { routing } from './app.routing';
