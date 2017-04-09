@@ -4,3 +4,9 @@
    -ms-flex: 1 1 auto;
    flex: 1 1 auto; 
 }
+
+/*
+.mat-tab-nav-bar .mat-tab-links md-ink-bar {
+    width: 160px !important;
+}
+*/

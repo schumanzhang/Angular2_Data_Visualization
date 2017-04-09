@@ -1,0 +1,12 @@
+<md-card>
+    <md-card-title>
+        {{richObject.name}}
+    </md-card-title>  
+    <md-card-subtitle>
+        Net worth: {{richObject.netWorth | currency:'USD':true}}
+    </md-card-subtitle>
+    <md-card-content>
+        {{richObject.name}} is {{richObject.age}} years old and was born in {{richObject.country}}. This person is very rich 
+        and is ranked {{richObject.rank}} on our list. Total net worh is a staggering {{richObject.netWorth | currency:'USD':true}}.
+    </md-card-content>
+</md-card>

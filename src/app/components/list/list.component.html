@@ -1,0 +1,13 @@
+<filters [countryOptions]="countryData"></filters>
+<div fxLayout="row">
+    <div fxFlex="25"></div>
+    <div fxFlex="50">
+        <div *ngFor="let rich of richList; let i=index">
+            <div fxLayout="column">
+                <div fxFlex="25px"></div>
+            </div>
+            <card [richObject]="rich"></card>
+        </div>
+    </div>
+    <div fxFlex="25"></div>
+</div>
