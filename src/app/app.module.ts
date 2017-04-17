@@ -15,6 +15,8 @@ import { CardComponent } from './components/list/card/card.component';
 import { FiltersComponent } from './components/list/filters/filters.component';
 import { NavbarComponent } from './layout/navbar.component';
 
+import { listFilter } from './components/list/pipes/list.pipe';
+
 import { routing } from './app.routing';
 
 @NgModule({
@@ -24,7 +26,8 @@ import { routing } from './app.routing';
     GraphComponent,
     NavbarComponent,
     CardComponent,
-    FiltersComponent
+    FiltersComponent,
+    listFilter
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { routing } from './app.routing';
     routing,
     MaterialModule,
     FlexLayoutModule,
-    Ng2SelectModule
+    Ng2SelectModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

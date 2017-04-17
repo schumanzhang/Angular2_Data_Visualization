@@ -11,14 +11,14 @@
                     <div fxLayout="column">
                         <div fxFlex="15px"></div>
                     </div>
-                    <ng2-select [placeholder]="'Birthplace filter'" [options]="countryOptions" [displayBy]="'label'" [selectedDisplayBy]="'label'" [identifyBy]="'name'"> </ng2-select>
+                    <ng2-select (ngModelChange)="changeBirthFilter($event)" [(ngModel)]="birthPlaceFilter" [placeholder]="'Birthplace filter'" [options]="countryOptions" [displayBy]="'label'" [selectedDisplayBy]="'label'" [identifyBy]="'name'"> </ng2-select>
                 </div>
                 <div fxFlex="10"></div>
                 <div fxFlex="40">
                     <div fxLayout="column">
                         <div fxFlex="15px"></div>
                     </div>
-                     <ng2-select [placeholder]="'Convert currency'" [options]="currencyOptions" [displayBy]="'label'" [selectedDisplayBy]="'label'" [identifyBy]="'name'"> </ng2-select>
+                     <ng2-select (ngModelChange)="changeCurrencyFilter($event)" [(ngModel)]="currencyFilter" [placeholder]="'Convert currency'" [options]="currencyOptions" [displayBy]="'label'" [selectedDisplayBy]="'label'" [identifyBy]="'name'"> </ng2-select>
                 </div>
             </div>
             <div fxLayout="row">
@@ -28,7 +28,7 @@
                         <div fxFlex="15px"></div>
                     </div>
                    <md-input-container>
-                        <input mdInput value="" placeholder="Search">
+                        <input mdInput value="" (ngModelChange)="changeSearchFilter($event)" [(ngModel)]="searchPhrase" placeholder="Search">
                    </md-input-container>
                 </div>
                 <div fxFlex="10"></div>
@@ -36,7 +36,7 @@
                     <div fxLayout="column">
                         <div fxFlex="25px"></div>
                     </div>
-                    <ng2-select [placeholder]="'Rank filter'" [options]="rankOptions" [displayBy]="'label'" [selectedDisplayBy]="'label'" [identifyBy]="'name'"> </ng2-select>
+                    <ng2-select (ngModelChange)="changeRankFilter($event)" [(ngModel)]="rankFilter" [placeholder]="'Rank filter'" [options]="rankOptions" [displayBy]="'label'" [selectedDisplayBy]="'label'" [identifyBy]="'name'"> </ng2-select>
                 </div>
             </div>
         </md-card>

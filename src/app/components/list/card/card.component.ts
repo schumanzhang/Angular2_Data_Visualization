@@ -8,6 +8,6 @@ import { RichPerson } from '../../../model/rich.person';
 export class CardComponent {
 
     @Input() richObject: RichPerson;
-
+    @Input() currencyFilter: string;
     
 }

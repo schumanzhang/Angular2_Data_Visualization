@@ -1,12 +1,12 @@
-<filters [countryOptions]="countryData"></filters>
+<filters [countryOptions]="countryData" (dropdownFilterChange)="sharedDataChange($event)"></filters>
 <div fxLayout="row">
     <div fxFlex="25"></div>
     <div fxFlex="50">
-        <div *ngFor="let rich of richList; let i=index">
+        <div *ngFor="let rich of richList | listFilter : filterForCountry:filterForRank:filterForSearch:filterForCurrency">
             <div fxLayout="column">
                 <div fxFlex="25px"></div>
             </div>
-            <card [richObject]="rich"></card>
+            <card [richObject]="rich" [currencyFilter]="filterForCurrency.name"></card>
         </div>
     </div>
     <div fxFlex="25"></div>
